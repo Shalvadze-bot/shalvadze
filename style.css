@@ -589,5 +589,23 @@ textarea{
 ========================== */
 
 @media (max-width: 576px){
+html,
+body {
+    overflow-x: hidden;
+}
+
+    .hero p{
+
+    max-width:320px;
+
+}
+
+.quote-button{
+
+    width:100%;
+
+    max-width:320px;
+
+}
 
 }
