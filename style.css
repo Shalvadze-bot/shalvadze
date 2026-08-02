@@ -10,58 +10,96 @@ body {
     background: #fff;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 24px 6%;
-    border-bottom: 1px solid #e5e5e5;
+html,
+body {
+    overflow-x: hidden;
 }
+
+
+header {
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 6%;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:white;
+    z-index:1000;
+    box-sizing:border-box;
+
+}
+
 
 .logo {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 3px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+nav{
+
+    display:flex;
+    align-items:center;
+
 }
 
-nav > a {
+.nav-links{
+
+    display:flex;
+    align-items:center;
+    gap:40px;
+
+}
+
+.nav-links a {
     position: relative;
-
     color: #111;
     text-decoration: none;
     font-size: 14px;
 }
 
-nav > a::after {
+.nav-links a::after {
     content: "";
-
     position: absolute;
     left: 0;
     bottom: -6px;
-
     width: 0;
     height: 1px;
-
     background: #111;
-
     transition: width 0.25s ease;
 }
 
-nav > a:hover::after {
+.nav-links a:hover::after {
     width: 100%;
+}
+
+.hamburger{
+
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+    gap:6px;
+
+}
+
+.hamburger span{
+
+    width:28px;
+    height:3px;
+    background:#111;
+    border-radius:10px;
+    transition:.3s;
+
 }
 
 .hero {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 50px 6% 160px;
+    padding: 70px 6% 160px;
 }
 
 .hero h1 {
@@ -71,12 +109,25 @@ nav > a:hover::after {
     letter-spacing: -3px;
     margin: 20px 0 30px;
 }
+    .hero p{
+
+    max-width:320px;
+
+}
 
 .hero-text {
     max-width: 600px;
     font-size: 20px;
     line-height: 1.6;
     color: #555;
+}
+
+.quote-button{
+
+    width:100%;
+
+    max-width:320px;
+
 }
 
 .eyebrow {
@@ -578,9 +629,39 @@ textarea{
    TABLETS
 ========================== */
 
-@media (max-width: 768px){
+@media (max-width: 600px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 40px 0;
+
+        gap: 25px;
+
+        box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 
 }
+
+
 
 
 
@@ -589,23 +670,5 @@ textarea{
 ========================== */
 
 @media (max-width: 576px){
-html,
-body {
-    overflow-x: hidden;
-}
-
-    .hero p{
-
-    max-width:320px;
-
-}
-
-.quote-button{
-
-    width:100%;
-
-    max-width:320px;
-
-}
 
 }
