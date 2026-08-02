@@ -140,13 +140,10 @@ nav{
 
 .button {
     display: inline-block;
-
     margin-top: 25px;
     padding: 14px 24px;
-
     background: #111;
     color: white;
-
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
@@ -163,10 +160,8 @@ nav{
 .language-button {
     background: none;
     border: none;
-
     font-family: inherit;
     font-size: 14px;
-
     cursor: pointer;
 }
 
@@ -176,24 +171,16 @@ nav{
 
 .language-menu {
     position: absolute;
-
     top: calc(100% + 12px);
     right: 0;
-
     min-width: 150px;
-
     padding: 8px 0;
-
     background: white;
     border: 1px solid #e5e5e5;
-
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
     opacity: 0;
     visibility: hidden;
-
     transform: translateY(-5px);
-
     transition:
         opacity 0.2s ease,
         transform 0.2s ease,
@@ -224,21 +211,16 @@ nav{
 .about-section {
     max-width: 1100px;
     margin: 0 auto;
-
-    padding: 120px 6%;
-
+    padding: 70px 6%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
-
     border-top: 1px solid #e5e5e5;
 }
 
 .about-heading h2 {
     max-width: 500px;
-
     margin-top: 20px;
-
     font-size: clamp(40px, 5vw, 64px);
     line-height: 1;
     letter-spacing: -2px;
@@ -250,17 +232,14 @@ nav{
 
 .about-content p {
     max-width: 520px;
-
     margin: 0 0 25px;
-
     font-size: 18px;
     line-height: 1.7;
-
     color: #555;
 }
 
 .services-section {
-    padding: 120px 6%;
+    padding: 70px 6%;
     border-top: 1px solid #e5e5e5;
 }
 
@@ -271,7 +250,6 @@ nav{
 
 .section-intro h2 {
     margin-top: 20px;
-
     font-size: clamp(40px, 5vw, 64px);
     line-height: 1;
     letter-spacing: -2px;
@@ -280,21 +258,16 @@ nav{
 .services-grid {
     max-width: 1100px;
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     border-top: 1px solid #111;
     border-bottom: 1px solid #111;
 }
 
 .service-card {
     min-height: 360px;
-
     padding: 30px;
-
     border-right: 1px solid #111;
-
     display: flex;
     flex-direction: column;
 }
@@ -320,11 +293,8 @@ nav{
 
 .service-card p {
     max-width: 320px;
-
     margin: 0;
-
     color: #555;
-
     font-size: 16px;
     line-height: 1.6;
 }
@@ -344,7 +314,7 @@ nav{
 }
 
 .products-section {
-    padding: 120px 6%;
+    padding: 70px 6%;
     border-top: 1px solid #e5e5e5;
 }
 
@@ -395,7 +365,7 @@ nav{
 
 .contact-section{
 
-    padding:120px 6%;
+    padding:70px 6%;
 
     background:#fff;
 
@@ -547,7 +517,7 @@ textarea{
 
     background: #111;
     color: #fff;
-    padding: 80px 6% 40px;
+    padding: 70px 6% 40px;
 
 }
 
@@ -631,6 +601,23 @@ textarea{
 
 @media (max-width: 600px) {
 
+    section {
+    padding: 60px 6%;
+}
+
+.hero{
+    padding:70px 6% 80px;
+}
+
+.about-section,
+.services-section,
+.products-section,
+.contact-section{
+
+    padding:70px 6%;
+
+}
+
     .hamburger {
         display: flex;
     }
@@ -658,6 +645,34 @@ textarea{
     .nav-links.active {
         display: flex;
     }
+
+    .about-section{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+.services-grid{
+    grid-template-columns:1fr;
+}
+
+.service-card{
+    min-height:auto;
+    border-right:none;
+    border-bottom:1px solid #111;
+}
+
+.service-card:last-child{
+    border-bottom:none;
+}
+
+.form-row{
+    grid-template-columns:1fr;
+}
+
+.footer-bottom{
+    flex-direction:column;
+    align-items:flex-start;
+}
 
 }
 
