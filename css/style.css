@@ -36,8 +36,9 @@ header {
 .logo {
     text-decoration: none;
     color: #111;
+    font-size: 30px;
     font-weight: 800;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 nav{
@@ -600,10 +601,6 @@ textarea{
 ========================== */
 
 @media (max-width: 600px) {
-
-    section {
-    padding: 60px 6%;
-}
 
 .hero{
     padding:70px 6% 80px;
